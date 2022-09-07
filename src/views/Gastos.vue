@@ -8,6 +8,7 @@ import htmlToPdfMake from 'html-to-pdfmake'
 import moment from 'moment'
 import type { Content, TDocumentDefinitions } from 'pdfmake/interfaces'
 
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const swal:any = inject('$swal')
 const gStore = gastosStore()
