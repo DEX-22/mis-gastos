@@ -7,11 +7,12 @@
     "preview": "vite preview --port 4173",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist --repo https://github.com/DEX-22/mis-gastos.git"
   },
   "dependencies": {
     "bootstrap": "^5.2.0",
     "bootstrap-icons": "^1.9.1",
+    "gh-pages": "^4.0.0",
     "html-to-pdfmake": "^2.4.5",
     "jspdf": "^2.5.1",
     "moment": "^2.29.4",
