@@ -8,7 +8,7 @@ import htmlToPdfMake from 'html-to-pdfmake'
 import moment from 'moment'
 import type { Content, TDocumentDefinitions } from 'pdfmake/interfaces'
 
-(pdfMake as any).vfs = pdfFonts.pdfMake.vfs
+
 const swal:any = inject('$swal')
 const gStore = gastosStore()
 const pdfTable:Ref = ref<HTMLDivElement>()
@@ -19,8 +19,10 @@ const exportToPdf = async  () => {
         swal('Ingrese almenos un gasto para generar pdf')
         return
     }else{
+        (pdfMake as any).vfs = pdfFonts.pdfMake.vfs    
+        
         const html:Content = htmlToPdfMake(pdfTable.value?.innerHTML)
-    
+        
         const documentDefinition:{content:Content} = {content: html};
 
         // pdfMake.addVirtualFileSystem(pdfFonts)
