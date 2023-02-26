@@ -10,6 +10,7 @@ import Gastos from './views/Gastos.vue';
   <Gastos />
 </template>
 
+
 <style >
 
 </style>
